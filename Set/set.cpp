@@ -9,6 +9,7 @@ vector<pii>v;
 int main()
 {
     set<ll>s;
+    //set<ll,greater<ll>> s    //for sorting in decreasing order
     ll n,a;
     cin>>n;
 
