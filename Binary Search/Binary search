@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+int main()
+{
+  int a[10];
+  int i,n,start,end,key,index,mid;
+  scanf("%d",&n);
+
+  for(i=1;i<=n;i++)
+  {
+     scanf("%d",&a[i]);
+  }
+
+  start=1;
+  end=n;
+  index=-1;
+  scanf("%d",&key);
+
+  while(start<=end)
+  {
+      mid=(start+end)/2;
+      if(a[mid]==key)
+      {
+         index=mid;
+         break;
+      }
+      else if(a[mid]<key)
+      {
+         start=mid+1;
+         index=mid;
+      }
+      else if(a[mid]>key)
+      {
+         end=mid-1;
+         index=mid;
+      }
+  }
+  printf("%d\n",index);
+
+}
